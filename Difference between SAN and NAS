@@ -1,0 +1,37 @@
+When explaining the difference between NAS (Network Attached Storage) and SAN (Storage Area Network) to an interviewer, focus on the distinction between File vs. Block access and the Network Type. 
+YouTube
+YouTube
+ +1
+Core Technical Differences
+Access Type:
+NAS: Operates at the File Level. It manages its own file system and presents storage to users as a shared drive or folder (e.g., "Z: drive").
+SAN: Operates at the Block Level. It presents raw storage blocks to a server, which the server’s operating system treats as a local, internal hard drive that it must format itself.
+Connectivity:
+NAS: Plugs directly into your existing Local Area Network (LAN) via standard Ethernet/TCP-IP.
+SAN: Typically uses a dedicated, high-speed network separate from the LAN, often using Fibre Channel (FC) for maximum performance and low latency.
+Protocols:
+NAS: Common protocols include NFS (Unix/Linux), SMB/CIFS (Windows), and HTTP.
+SAN: Uses SCSI, Fibre Channel, or iSCSI. 
+Hypertec SP
+Hypertec SP
+ +8
+Real-Life Interview Scenario: "The Logistics Warehouse"
+To make it relatable, compare them to how a warehouse manages goods:
+NAS Scenario (The Loading Dock):
+Imagine a warehouse where multiple delivery drivers (users/servers) come to a single loading dock to pick up or drop off specific "packages" (files).
+Why NAS? It's easy to manage. The warehouse (NAS) handles where the packages go inside; the drivers just ask for a specific box. It’s perfect for a small office where everyone needs to share documents or for collaborative video editing where editors need to open the same project files.
+SAN Scenario (The Conveyor Belt System):
+Imagine a high-speed, automated conveyor system built underneath the warehouse floors, connecting specific processing machines directly to huge storage bins.
+Why SAN? Performance. The machines (servers) get raw materials (blocks) as fast as if they were right next to the bin. It’s essential for large-scale databases (like e-commerce sites) or virtualization (VMware) where speed and absolute uptime are mission-critical. 
+IBM
+IBM
+ +3
+When to Use Which?
+Use NAS when:
+You need simple file sharing and collaboration among users.
+You have a limited budget and want to use existing Ethernet cables.
+You are setting up an active archive for unstructured data like photos or backups.
+Use SAN when:
+You need ultra-low latency for high-traffic databases or e-commerce platforms.
+You are running a large virtualized environment (e.g., hundreds of Virtual Machines).
+You need massive scalability without putting a heavy load on your main office network.
